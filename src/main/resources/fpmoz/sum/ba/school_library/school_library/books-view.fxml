@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="430.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpmoz.sum.ba.school_library.school_library.controller.BooksController">
+   <children>
+      <Button layoutX="559.0" layoutY="80.0" mnemonicParsing="false" onAction="#addBook" text="Dodaj Knjigu" />
+      <TableView fx:id="booksTableView" layoutX="20.0" layoutY="119.0" prefHeight="284.0" prefWidth="624.0">
+        <columns>
+          <TableColumn fx:id="columnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="columnTitle" prefWidth="75.0" text="Naziv" />
+            <TableColumn fx:id="columnAuthor" prefWidth="75.0" text="Autor" />
+            <TableColumn fx:id="columnIsbn" prefWidth="75.0" text="ISBN" />
+            <TableColumn fx:id="columnPublisher" prefWidth="75.0" text="Izdavač" />
+            <TableColumn fx:id="columnEdition" prefWidth="75.0" text="Izdanje" />
+            <TableColumn fx:id="columnStockNumber" prefWidth="75.0" text="Količina" />
+            <TableColumn fx:id="columnCategory" prefWidth="75.0" text="Kategorija" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="27.0" prefHeight="35.0" prefWidth="163.0" text="Knjige" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Button layoutX="461.0" layoutY="80.0" mnemonicParsing="false" onAction="#editBook" text="Uredi Knjigu" />
+      <Button layoutX="361.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteBook" text="Obriši Knjigu" />
+      <Button layoutX="20.0" layoutY="80.0" mnemonicParsing="false" onAction="#goBack" text="Natrag" />
+   </children>
+</AnchorPane>

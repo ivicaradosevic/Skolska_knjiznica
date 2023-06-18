@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="660.0" style="-fx-alignment: CENTER;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpmoz.sum.ba.school_library.school_library.controller.LoginController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="195.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="405.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="123.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="151.0" minHeight="10.0" prefHeight="131.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="90.0" style="-fx-alignment: CENTER;" text="Odustani" textAlignment="CENTER" GridPane.rowIndex="3" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="109.0" style="-fx-background-color: #90021F; -fx-alignment: CENTER;" text="Prijava" textAlignment="CENTER" textFill="#f8f5f5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="297.0" style="-fx-alignment: RIGHT;" text="Korisničko ime" textAlignment="CENTER" GridPane.rowIndex="1" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="205.0" text="Lozinka" GridPane.rowIndex="2" />
+      <TextField fx:id="username" prefHeight="25.0" prefWidth="234.0" style="-fx-max-width: 300;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <PasswordField fx:id="password" prefHeight="25.0" prefWidth="256.0" style="-fx-max-width: 300;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Prijava u školsku knjižnicu" textAlignment="CENTER" GridPane.columnIndex="1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

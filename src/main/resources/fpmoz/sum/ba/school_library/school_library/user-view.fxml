@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="431.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpmoz.sum.ba.school_library.school_library.controller.UserController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="241.0" layoutY="26.0" prefHeight="35.0" prefWidth="175.0" text="Korisnici" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Button layoutX="523.0" layoutY="89.0" mnemonicParsing="false" onAction="#addUser" text="Dodaj Korisnika" />
+      <TableView fx:id="usersTableView" layoutX="31.0" layoutY="134.0" prefHeight="261.0" prefWidth="593.0">
+        <columns>
+          <TableColumn fx:id="columnId" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="columnOib" prefWidth="75.0" text="OIB" />
+          <TableColumn fx:id="columnFirstName" prefWidth="75.0" text="Ime" />
+            <TableColumn fx:id="columnLastName" prefWidth="75.0" text="Prezime" />
+            <TableColumn fx:id="columnUsername" prefWidth="75.0" text="Korisničko ime" />
+            <TableColumn fx:id="columnEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="columnUserType" prefWidth="75.0" text="Tip" />
+            <TableColumn fx:id="columnYear" prefWidth="75.0" text="Razred" />
+        </columns>
+      </TableView>
+      <Button layoutX="31.0" layoutY="89.0" mnemonicParsing="false" onAction="#goBack" text="Natrag" />
+      <Button layoutX="300.0" layoutY="89.0" mnemonicParsing="false" onAction="#deleteUser" text="Obriši Korisnika" />
+      <Button layoutX="413.0" layoutY="89.0" mnemonicParsing="false" onAction="#editUser" text="Uredi Korisnika" />
+   </children>
+</AnchorPane>

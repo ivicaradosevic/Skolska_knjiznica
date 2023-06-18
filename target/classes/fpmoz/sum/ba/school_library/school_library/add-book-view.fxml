@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpmoz.sum.ba.school_library.school_library.controller.AddBookController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="307.0" text="ISBN" textAlignment="CENTER" GridPane.rowIndex="1" />
+      <TextField fx:id="isbn" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="306.0" text="Naziv" textAlignment="CENTER" GridPane.rowIndex="2" />
+      <TextField fx:id="title" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="301.0" text="Nova Knjiga" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="302.0" text="Kategorija" textAlignment="CENTER" GridPane.rowIndex="4" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="303.0" text="Izdavač" textAlignment="CENTER" GridPane.rowIndex="5" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="305.0" text="Izdanje" textAlignment="CENTER" GridPane.rowIndex="6" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="305.0" text="Količina" textAlignment="CENTER" GridPane.rowIndex="7" />
+      <TextField fx:id="publisher" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField fx:id="edition" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <TextField fx:id="stockNumber" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <ComboBox fx:id="category" prefHeight="31.0" prefWidth="302.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveBook" style="-fx-background-color: #90021F;" text="Spremi" textFill="#fcf9f9" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="300.0" text="Autor" textAlignment="CENTER" GridPane.rowIndex="3" />
+      <TextField fx:id="author" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goBack" text="Odustani" textAlignment="CENTER" GridPane.rowIndex="8" />
+   </children>
+</GridPane>

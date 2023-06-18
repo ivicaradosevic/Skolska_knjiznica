@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="430.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpmoz.sum.ba.school_library.school_library.controller.IssuedBooksController">
+   <children>
+      <TableView fx:id="issuedBooksTableView" layoutX="40.0" layoutY="144.0" prefHeight="250.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="bookTitle" prefWidth="147.0" text="Naziv Knjige" />
+          <TableColumn fx:id="bookIssuer" minWidth="0.0" prefWidth="87.0" text="Posuditelj" />
+            <TableColumn fx:id="issueDate" prefWidth="134.0" text="Datum posudbe" />
+            <TableColumn fx:id="category" minWidth="0.0" prefWidth="87.0" text="Kategorija knjige" />
+            <TableColumn fx:id="userType" minWidth="0.0" prefWidth="87.0" text="Tip posuditelja" />
+        </columns>
+      </TableView>
+      <Button layoutX="40.0" layoutY="94.0" mnemonicParsing="false" onAction="#goBack" text="Natrag" />
+      <Button layoutX="531.0" layoutY="94.0" mnemonicParsing="false" onAction="#issueBook" text="Posudi Knjigu" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="169.0" layoutY="43.0" prefHeight="35.0" prefWidth="323.0" text="Posuđene Knjige">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

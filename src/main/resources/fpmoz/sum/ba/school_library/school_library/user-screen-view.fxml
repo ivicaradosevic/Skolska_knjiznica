@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="430.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpmoz.sum.ba.school_library.school_library.controller.UserScreenController">
+   <children>
+      <Button layoutX="572.0" layoutY="48.0" mnemonicParsing="false" onAction="#logout" text="Odjava" />
+      <TableView fx:id="userTableView" layoutX="35.0" layoutY="100.0" prefHeight="294.0" prefWidth="590.0">
+        <columns>
+          <TableColumn fx:id="bookTitle" prefWidth="148.0" text="Naziv Knjige" />
+          <TableColumn fx:id="bookCategory" prefWidth="123.0" text="Kategorija" />
+            <TableColumn fx:id="issueDate" prefWidth="156.0" text="Datum Posudbe" />
+            <TableColumn fx:id="returnDate" prefWidth="162.0" text="Datum Povratka" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="43.0" text="Pregled posuđenih knjiga" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
