@@ -17,10 +17,9 @@
             <TableColumn fx:id="columnOib" prefWidth="75.0" text="OIB" />
           <TableColumn fx:id="columnFirstName" prefWidth="75.0" text="Ime" />
             <TableColumn fx:id="columnLastName" prefWidth="75.0" text="Prezime" />
-            <TableColumn fx:id="columnUsername" prefWidth="75.0" text="Korisničko ime" />
+            <TableColumn fx:id="columnUsername" prefWidth="116.0" text="Korisničko ime" />
             <TableColumn fx:id="columnEmail" prefWidth="75.0" text="Email" />
-            <TableColumn fx:id="columnUserType" prefWidth="75.0" text="Tip" />
-            <TableColumn fx:id="columnYear" prefWidth="75.0" text="Razred" />
+            <TableColumn fx:id="columnYear" prefWidth="101.0" text="Razred" />
         </columns>
       </TableView>
       <Button layoutX="31.0" layoutY="89.0" mnemonicParsing="false" onAction="#goBack" text="Natrag" />

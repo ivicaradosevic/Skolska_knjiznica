@@ -283,7 +283,7 @@ public class ReturnBookController implements Initializable {
             String query = "INSERT INTO returnedbooks(books_id, user_id, returned_date) VALUES(?, ?, ?)";
 
             LocalDate selectedDate = returnDate.getValue();
-            java.sql.Date date = new Date(selectedDate.getYear(), selectedDate.getMonthValue(), selectedDate.getDayOfMonth());
+            java.sql.Date date = new Date(selectedDate.getYear()-1900, selectedDate.getMonthValue(), selectedDate.getDayOfMonth());
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setLong(1, selectedBook.getId());
@@ -304,11 +304,11 @@ public class ReturnBookController implements Initializable {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Upozorenje");
-            alert.setContentText("Knjiga uspješno posuđena.");
+            alert.setContentText("Knjiga uspješno vraćena.");
             alert.showAndWait();
 
         }catch (Exception e){
-            System.out.println("Greška prilikom spremanja posudbe");
+            System.out.println("Greška prilikom spremanja povrata");
         }
 
     }

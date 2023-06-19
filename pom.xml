@@ -7,7 +7,7 @@
     <groupId>fpmoz.sum.ba.school_library</groupId>
     <artifactId>school_library</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>school_library</name>
+    <name>skolska_knjiznica</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

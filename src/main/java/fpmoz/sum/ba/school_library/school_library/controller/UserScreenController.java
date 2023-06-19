@@ -59,7 +59,9 @@ public class UserScreenController implements Initializable {
         try {
 
             Connection connection = Database.CONNECTION;
-            String query = "SELECT b.title, c.name, ib.issue_date, rb.returned_date FROM books b " + "INNER JOIN category c ON c.id = b.category_id " + "INNER JOIN issuedbooks ib ON ib.books_id = b.id AND ib.user_id = ? "
+            String query = "SELECT b.title, c.name, ib.issue_date, rb.returned_date FROM books b " +
+                    "INNER JOIN category c ON c.id = b.category_id "
+                    + "INNER JOIN issuedbooks ib ON ib.books_id = b.id AND ib.user_id = ? "
                 + "LEFT JOIN returnedbooks rb ON rb.books_id = b.id AND ib.user_id = ?";
 
             PreparedStatement ps = connection.prepareStatement(query);
@@ -80,7 +82,9 @@ public class UserScreenController implements Initializable {
                 model.setBookTitle(title);
                 model.setBookCategory(category);
                 model.setIssueDate(issueDate.toLocalDate());
-                model.setReturnDate(returnedDate.toLocalDate());
+                if(returnedDate != null){
+                    model.setReturnDate(returnedDate.toLocalDate());
+                }
                 list.add(model);
 
             }

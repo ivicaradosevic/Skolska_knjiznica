@@ -49,9 +49,6 @@ public class UserController implements Initializable {
     private TableColumn<User, String> columnEmail;
 
     @FXML
-    private TableColumn<Books, String> columnUserType;
-
-    @FXML
     private TableColumn<User, String> columnYear;
 
     @FXML
@@ -157,30 +154,6 @@ public class UserController implements Initializable {
                 String email = resultSet.getString(7);
                 Integer year = resultSet.getInt(8);
                 Long userTypeId = resultSet.getLong(9);
-
-                String userTypeName = "";
-                if (userTypeId != null) {
-                    String categoryQuery = "SELECT name FROM usertype WHERE id = ?";
-                    PreparedStatement preparedStatement = c.prepareStatement(categoryQuery);
-                    preparedStatement.setLong(1, userTypeId);
-
-                    ResultSet userTypeResultSet = preparedStatement.executeQuery();
-                    while (userTypeResultSet.next()) {
-                        userTypeName = userTypeResultSet.getString(1);
-                    }
-                }
-
-                String finalUserTypeName = userTypeName;
-                columnUserType.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Books, String>, ObservableValue<String>>() {
-                    @Override
-                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Books, String> p) {
-                        if (p.getValue() != null) {
-                            return new SimpleStringProperty(finalUserTypeName);
-                        } else {
-                            return new SimpleStringProperty("");
-                        }
-                    }
-                });
 
                 User user = new User();
                 user.setId(id);

@@ -68,8 +68,15 @@ public class EditUserController implements Initializable {
                 username.getText().isEmpty() ||
                 password.getText().isEmpty() ||
                 email.getText().isEmpty() ||
-                userTypes.getValue() == null ||
-                years.getValue() == null) {
+                userTypes.getValue() == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Obavezni podaci");
+            alert.setContentText("Molim popunite obavezne podatke");
+            alert.showAndWait();
+            return;
+        }
+
+        if(userTypes.getValue().getName().equals("Učenik") &&  years.getValue() == null){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Obavezni podaci");
             alert.setContentText("Molim popunite obavezne podatke");

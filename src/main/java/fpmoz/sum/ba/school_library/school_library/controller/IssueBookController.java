@@ -277,7 +277,7 @@ public class IssueBookController implements Initializable {
             String query = "INSERT INTO issuedbooks(books_id, user_id, issue_date) VALUES(?, ?, ?)";
 
             LocalDate selectedDate = issueDate.getValue();
-            java.sql.Date date = new Date(selectedDate.getYear(), selectedDate.getMonthValue(), selectedDate.getDayOfMonth());
+            java.sql.Date date = new Date(selectedDate.getYear()-1900, selectedDate.getMonthValue(), selectedDate.getDayOfMonth());
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setLong(1, selectedBook.getId());

@@ -21,6 +21,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -52,9 +53,6 @@ public class BooksController implements Initializable {
 
     @FXML
     private TableColumn<Books, Integer> columnStockNumber;
-
-    @FXML
-    private TableColumn<Books, String> columnCategory;
 
     @FXML
     public void goBack(ActionEvent evt) {
@@ -159,30 +157,6 @@ public class BooksController implements Initializable {
                 Integer edition = resultSet.getInt(6);
                 Long categoryId = resultSet.getLong(7);
                 Integer stockNumber = resultSet.getInt(8);
-
-                String categoryName = "";
-                if (categoryId != null) {
-                    String categoryQuery = "SELECT name FROM category WHERE id = ?";
-                    PreparedStatement preparedStatement = c.prepareStatement(categoryQuery);
-                    preparedStatement.setLong(1, categoryId);
-
-                    ResultSet categoryResultSet = preparedStatement.executeQuery();
-                    while (categoryResultSet.next()) {
-                        categoryName = categoryResultSet.getString(1);
-                    }
-                }
-
-                String finalCategoryName = categoryName;
-                columnCategory.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Books, String>, ObservableValue<String>>() {
-                    @Override
-                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Books, String> p) {
-                        if (p.getValue() != null) {
-                            return new SimpleStringProperty(finalCategoryName);
-                        } else {
-                            return new SimpleStringProperty("");
-                        }
-                    }
-                });
 
                 Books books = new Books();
                 books.setId(id);
